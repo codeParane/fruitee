@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <a v-bind:href="'/desc/'+juice.id">
-      <img class="card-img-top" v-bind:src="juice.image" alt="Card image cap" style="width: 18rem;">
+    <a v-bind:href="'#/desc/'+juice.id">
+      <img class="card-img-top" v-bind:src="juice.image" alt="Card image cap" style="width: 15rem;">
     </a>
     <div class="card-body">
       <h5 class="card-title">{{juice.name}}</h5>
@@ -35,3 +35,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+.card {
+  padding: 2px;
+  margin: 6px;
+}
+</style>

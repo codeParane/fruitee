@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Cart from "./components/Cart.vue";
 import JuiceDesc from "./views/JuiceDesc.vue";
+
 Vue.use(Router);
 
 export default new Router({
@@ -19,7 +20,7 @@ export default new Router({
     },
     {
       path: "/desc/:id",
-      name: "JuiceDesc",
+      name: "juiceDesc",
       component: JuiceDesc
     }
   ]

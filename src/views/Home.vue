@@ -6,10 +6,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-8">
+      <br>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
         <juices></juices>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5">
         <cart></cart>
       </div>
     </div>

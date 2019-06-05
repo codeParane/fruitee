@@ -9,7 +9,7 @@
       class="alert alert-secondary my-5"
       role="alert"
     >Stomach is empty! Please get some Juices.</div>
-    <table v-else class="table table-striped mb-5">
+    <table v-else class="table">
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
@@ -45,12 +45,15 @@
         </tr>
 
         <tr class="table-footer">
-          <td colspan="5" class="total">Total:</td>
+          <td colspan="3" class="total">Total:</td>
           <td>$ {{cartTotalAmount}}</td>
         </tr>
         <!-- <tr class="table-footer"> -->
         <td>
-          <router-link to="/cart" tag="button">Checkout</router-link>
+          <router-link to="/cart" tag="button" class="btn btn-primary">Checkout</router-link>
+        </td>
+        <td colspan="3" v-if="this.$route.path == '/cart'">
+          <router-link to="/" tag="button" class="btn btn-info">Continue Shopping</router-link>
         </td>
         <!-- </tr> -->
       </tbody>

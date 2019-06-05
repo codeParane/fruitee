@@ -15,10 +15,23 @@ export default new Vuex.Store({
     },
     cartTotalAmount: state => {
       return state.cart.reduce((total, juice) => {
-        return total + juice.price * juice.quantity;
+        let tot = total + juice.price * juice.quantity;
+        let dis = tot > 500 ? tot * 0.02 : 0;
+        let vat = (tot - dis) * 0.12;
+        let finalTotal = tot - dis + vat;
+        return finalTotal;
       }, 0);
+    },
+    cartTotalDiscount: state => {
+      return state.cart.reduce(total => {
+        return total > 500 ? total * 0.2 : 0;
+      }, 0);
+    },
+    cartTotalVat: state => {
+      return state.cart * 1.2;
     }
   },
+
   mutations: {
     setUpJuices: (state, juicesPL) => {
       state.juices = juicesPL;
